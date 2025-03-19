@@ -2,9 +2,8 @@
 
 int main()
 {
-    Zombie::randomChump("ayoub");
-    Zombie* O;
-    O = Zombie::newZombie("akhrif");
+    randomChump("ayoub");
+    Zombie* O = newZombie("akhrif");
     O->announce();
     delete O;
 }
