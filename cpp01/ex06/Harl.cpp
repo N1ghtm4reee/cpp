@@ -24,19 +24,18 @@ void Harl::complain(std::string level)
     void (Harl::*in)() = &Harl::info;
     void (Harl::*w)() = &Harl::warning;
     void (Harl::*e)() = &Harl::error;
-    std::cout << i << std::endl;
     switch (i) {
         case 0:
-            std::cout << "DEBUG\n";
+            std::cout << "[DEBUG]\n";
             (this->*d)();
         case 1:
-            std::cout << "INFO\n";
+            std::cout << "[INFO]\n";
             (this->*in)();
         case 2:
-            std::cout << "WARNING\n";
+            std::cout << "[WARNING]\n";
             (this->*w)();
         case 3:
-            std::cout << "ERROR\n";
+            std::cout << "[ERROR]\n";
             (this->*e)();
             break;
         default :

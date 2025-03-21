@@ -16,8 +16,6 @@ void Replace(Infile* Infile, Outfile* Outfile)
         }
         *Outfile->GetFile() << line << "\n";
     }
-    Infile->CloseFile();
-    Outfile->CloseFile();
 }
 
 int main(int ac, char **av)
@@ -26,6 +24,6 @@ int main(int ac, char **av)
         return 1;
     remove("newfile");
     Infile Infile((const char *)av[1], av[2], av[3]);
-    Outfile NewFile("newfile");
+    Outfile NewFile("newfile", Infile);
     Replace(&Infile, &NewFile);
 }

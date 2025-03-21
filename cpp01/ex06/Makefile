@@ -7,10 +7,10 @@ NAME = harlFilter
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp
-	$(CC) $(CPPFLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean :
 	@rm -f $(OBJS)

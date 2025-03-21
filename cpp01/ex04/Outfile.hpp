@@ -1,16 +1,14 @@
 #ifndef OUTFILE_HPP
 #define OUTFILE_HPP
 
-#include <iostream>
-#include <string>
-#include <fstream>
+#include "Infile.hpp"
 
 class Outfile {
     private :
-        const char* filename;
         std::ofstream file;
+        Infile& infilePtr;
     public :
-        Outfile(const char* name);
+        Outfile(const char* name, Infile& infilePtr);
         ~Outfile();
         std::ofstream* GetFile();
         void CloseFile();

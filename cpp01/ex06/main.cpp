@@ -3,8 +3,8 @@
 int main()
 {
     Harl harl;
-    harl.complain("DEBUG");
+    // harl.complain("DEBUG");
     // harl.complain("INFO");
     // harl.complain("DEBUG");
-    // harl.complain("WARNING");
+    harl.complain("WARNING");
 }

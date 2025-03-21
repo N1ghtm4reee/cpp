@@ -4,10 +4,10 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <cstdlib>
 
 class Infile {
     private :
-        const char* filename;
         std::ifstream file;
         char *find;
         char *replace;
@@ -15,8 +15,8 @@ class Infile {
         Infile(const char* name, char *find, char *replace);
         ~Infile();
         std::ifstream* GetFile();
-        char* GetFind();
-        char* GetToReplace();
+        const char* GetFind();
+        const char* GetToReplace();
         void CloseFile();
 };
 

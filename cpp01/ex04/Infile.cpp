@@ -1,6 +1,6 @@
 #include "Infile.hpp"
 
-Infile::Infile(const char* name, char *find, char *replace) : filename(name), file(name), find(find), replace(replace)
+Infile::Infile(const char* name, char *find, char *replace) : file(name), find(find), replace(replace)
 {
     if (file.fail())
     {
@@ -11,7 +11,7 @@ Infile::Infile(const char* name, char *find, char *replace) : filename(name), fi
 
 Infile::~Infile()
 {
-
+    CloseFile();
 }
 
 std::ifstream* Infile::GetFile()
@@ -19,12 +19,12 @@ std::ifstream* Infile::GetFile()
     return &file;
 }
 
-char* Infile::GetFind()
+const char* Infile::GetFind()
 {
     return find;
 }
 
-char* Infile::GetToReplace()
+const char* Infile::GetToReplace()
 {
     return replace;
 }
