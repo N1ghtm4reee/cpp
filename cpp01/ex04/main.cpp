@@ -14,8 +14,11 @@ void Replace(Infile* Infile, Outfile* Outfile)
             line.erase(i, to_find.length());
             line.insert(i, to_replace);
         }
-        *Outfile->GetFile() << line << "\n";
+        *Outfile->GetFile() << line;
+        if (!Infile->GetFile()->eof())
+            *Outfile->GetFile() << "\n";
     }
+
 }
 
 int main(int ac, char **av)

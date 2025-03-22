@@ -9,10 +9,6 @@ Zombie* zombieHorde( int N, std::string name )
     }
     Zombie* horde = new Zombie[N];
     for (int i = 0; i < N; i++)
-    {
-        std::stringstream ss;
-        ss << (i + 1);
-        horde[i].setname(name + ss.str());
-    }
+        horde[i].setname(name);
     return horde;
 }
