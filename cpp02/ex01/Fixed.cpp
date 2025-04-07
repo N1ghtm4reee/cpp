@@ -66,13 +66,3 @@ Fixed::~Fixed()
 {
     std::cout << "Destructor called\n";
 }
-
-Fixed& Fixed::min(Fixed& a, Fixed& b)
-{
-    return (a.value < b.value ? a : b);
-}
-
-Fixed& Fixed::max(Fixed& a, Fixed& b)
-{
-    return (a.value > b.value ? a : b);
-}

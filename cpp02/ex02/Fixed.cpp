@@ -89,7 +89,7 @@ Fixed Fixed::operator/(const Fixed& a)
     return op;
 }
 
-Fixed Fixed::operator++()//pre inc
+Fixed& Fixed::operator++()//pre inc
 {
     value++;
     return *this;

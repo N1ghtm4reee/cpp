@@ -25,7 +25,7 @@ class Fixed
         Fixed operator-(const Fixed& a);
         Fixed operator*(const Fixed& a);
         Fixed operator/(const Fixed& a);
-        Fixed operator++(void);
+        Fixed& operator++(void);
         Fixed operator++(int);
         Fixed operator--(void);
         Fixed operator--(int);
