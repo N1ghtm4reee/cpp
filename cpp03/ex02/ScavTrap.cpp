@@ -2,6 +2,9 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
+    hitPoint = 100;
+    energyPoint = 50;
+    attackDamage = 20;
     std::cout << "ScavTrap Default Constructor called\n";
 }
 
@@ -13,6 +16,9 @@ ScavTrap::ScavTrap(const ScavTrap& obj)
 
 ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name)
 {
+    hitPoint = 100;
+    energyPoint = 50;
+    attackDamage = 20;
     std::cout << "ScavTrap Constructor called\n";
 }
 
