@@ -16,6 +16,8 @@ class DiamondTrap : public ScavTrap, public FragTrap
         ~DiamondTrap();
         DiamondTrap(std::string Name);
         void whoAmI();
+        void attack(const std::string& target);
+        // 
         unsigned int getHit();
         unsigned int getEnergy();
         unsigned int getDamage();

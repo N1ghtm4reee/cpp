@@ -30,12 +30,7 @@ FragTrap::~FragTrap()
 FragTrap& FragTrap::operator=(const FragTrap& obj)
 {
     if (this != &obj)
-    {
-        Name = obj.Name;
-        hitPoint = obj.hitPoint;
-        energyPoint = obj.energyPoint;
-        attackDamage = obj.attackDamage;
-    }
+        ClapTrap::operator=(obj);
     return *this;
 }
 

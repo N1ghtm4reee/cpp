@@ -1,8 +1,8 @@
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = $(addsuffix .cpp, main ClapTrap ScavTrap FragTrap DiamondTrap)
+SRC = $(addsuffix .cpp, main ClapTrap)
 OBJ = $(SRC:.cpp=.o)
-NAME = DiamondTrap
+NAME = ClapTrap
 
 all : $(NAME)
 

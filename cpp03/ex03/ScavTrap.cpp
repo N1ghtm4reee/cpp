@@ -30,12 +30,7 @@ ScavTrap::~ScavTrap()
 ScavTrap& ScavTrap::operator=(const ScavTrap& obj)
 {
     if (this != &obj)
-    {
-        Name = obj.Name;
-        hitPoint = obj.hitPoint;
-        energyPoint = obj.energyPoint;
-        attackDamage = obj.attackDamage;
-    }
+        ClapTrap::operator=(obj);
     return *this;
 }
 
@@ -43,7 +38,7 @@ void ScavTrap::attack(const std::string& target)
 {
     if (energyPoint > 0 && hitPoint > 0)
     {
-        std::cout << "Scavtrap " << Name << "attacks " << target << ", causing " << attackDamage <<  " of damage!" << std::endl;
+        std::cout << "Scavtrap " << Name << " attacks " << target << ", causing " << attackDamage <<  " of damage!" << std::endl;
         energyPoint--;
     }
     else
